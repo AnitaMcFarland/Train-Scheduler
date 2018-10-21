@@ -23,81 +23,94 @@
                 </div>
             </div>
         </div>
-     
-          <table class="row" id="currentTrainSchedule">
-            <div class=" col-12 card-header">Current Train Schedule</div>
-                   
-
-         <div class="table-responsive">
-             <div class="row"
-          <tbody>    
-                      
-              <th scope="col-2" id="trainName">
-                 <p>Train Name</p>
-                <span tr id="trainName-display"></tr></span>
-              </th>
-
-            <th scope="col-2" id="destination">
-                <p>Destination</p>
-                <span tr id="destination-display"></tr></span>
-            </th>           
-            
-            <th scope="col-2" id="frequency">
-                <p>Frequency (min)</p>
-                 <span tr id="frequency-display"></tr></span> 
-             </th>
-
-            <th scope="col-2" id="nextArrival">
-                <p>Next Arrival</p>
-                <span tr id="nextArrival-display"></tr></span> 
-            </th>
-
-            <th scope="col-2" id="minutesAway">
-                  <p>Minutes Away</p>
-                 <span tr id="minutesAway-display"></tr></span> 
-            </th>
-           </div>
+        <!-- </div> -->
+        <div class="card mb-4">
+            <div class="card-header">Current Train</div>
+            <div class="card-body">
+              <table class="table table-sm table-hover" id='currentTrainSchedule'>
         
-         </tbody> 
+            <!-- <div class="row"  -->
+                <tbody>       
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col-2" id="trainName">
+                        <p>Train Name</p>
+                        <!-- <td id="trainName-display"></td> -->
+                    </th>
 
+                    <th scope="col-2" id="destination">
+                        <p>Destination</p>
+                        <!-- <td id="destination-display"></td> -->
+                    </th>
 
-        </table> 
-        
-        
-        <div class= class="row" id="formData">
-            <div class="col">
-                <div class="col-12 card-header">Add Train</div>
-                <form>
-                       
-                    <div class="form-group">
-                            
-                        <label for="exampleInput">Train Name</label>
-                        <input type="name" class="form-control" id="form-name" placeholder="Choo choo">
-                    </div>
-                    <div class="form-group">
-                      
-                       <label for="exampleInput">Destination</label>
-                        <input type="destination" class="form-control" id="form-destination" placeholder="Chicago">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInput">First Train Time(HH:MM-military time)</label>
-                        <input type="time" class="form-control" id="form-time" placeholder="05:35">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInput">Frequency</label>
-                        <input type="frequency" class="form-control" id="form-frequency" <placeholder="">
-                             <!-- </tr>
-                            </thead>
-                        </table>
-                    </tbody></tbody> -->
-                    </div>
+                    <th scope="col-2" id="frequency">
+                        <p>Frequency (min)</p>
 
-                    <button id="submit" class="btn btn-primary">Submit</button>
-                </form>
+                    </th>
 
-            </div>
+                    <th scope="col-2" id="nextArrival">
+                        <p>Next Arrival</p>
+
+                    </th>
+
+                    <th scope="col-2" id="minutesAway">
+                        <p>Minutes Away</p>
+
+                    </th>
+                    </tr>
+                </thead>
+                 
+                  <tr>
+                    <td id="sv.trainName"></td>
+                    <td id="sv.destination"></td>
+                    <td id="sv.frequency"></td>
+                    <td id="sv.nextArrival"></td>
+                    <td id="sv.minutesAway"></td>
+                  </tr>
+              </tbody>
+               
+            </table>
         </div>
+        
+        <!-- </div>  
+        </div> -->
     </div>
+    <div class="row">
+    <div class="col-12"> 
+     <div class="card mb-4">
+     <div class="card-header">Add Train</div>
+    <div class="card-body">
+    
+     <form> 
+        <div class="form-group">
+            <label for="exampleInput">Train Name</label>
+            <input type="name" class="form-control" id="form-name" placeholder="Choo choo">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInput">Destination</label>
+            <input type="destination" class="form-control" id="form-destination" placeholder="Chicago">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInput">First Train Time(HH:MM-military time)</label>
+            <input type="time" class="form-control" id="form-time" placeholder="05:35">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInput">Frequency</label>
+            <input type="frequency" class="form-control" id="form-frequency" <placeholder="">
+        </div>
+
+
+        <button id="submit" class="btn btn-primary">Submit</button>
+    </form>
+   </div>
+   </div>
+  </div>
+  </div>
+</div>
 
 
 

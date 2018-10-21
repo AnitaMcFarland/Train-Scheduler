@@ -14,7 +14,7 @@ var database = firebase.database();
 $("#submit").on(
   "click",
   function(event) {
-    console.log("click");
+
     event.preventDefault();
 
     var tFrequency = 3;
@@ -47,7 +47,7 @@ $("#submit").on(
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
-    // Grabbed values from text boxes
+    // Grabbed user input
     var trainName = $("#form-name")
       .val()
       .trim();
@@ -62,16 +62,17 @@ $("#submit").on(
     var firstTime = $("#form-time")
       .val()
       .trim();
-    // minutesAway = $("#tMinutesTillTrain-input")
-    //   .val()
-    //   .trim();
+    var minutesAway = $("#form-minutes")
+     .val()
+     .trim();
 
     database.ref().push({
       trainName: trainName,
       destination: destination,
       frequency: frequency,
       nextArrival: firstTime,
-    //   minutesAway: tMinutesTillTrain
+      minutesAway: minutesAway,
+    //   minutesAway: tMinutesTillTrain,
     });
 });
 
@@ -79,7 +80,7 @@ $("#submit").on(
 database.ref().on("child_added", function(snapshot) {
     // storing the snapshot.val() in a variable for convenience
     var sv = snapshot.val();
-    console.log (sv);
+     console.log (sv);
     // Create the new row
   var newRow = $("<tr>").append(
     $("<td>").text(sv.trainName),
