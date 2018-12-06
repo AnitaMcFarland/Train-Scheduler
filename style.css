@@ -1,15 +1,25 @@
 body{
-    background-color: rgba(255, 153, 0, 0.466);
+    background-color: rgba(136, 231, 231, 0.37);
    
     
 }
-.jumbotron{
+.container{
     text-align: center;
-    background-color: rgb(133, 231, 221);
-     
+    background-color: rgb(52, 118, 224) ;
+    border: black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000; 
+    
+    
 
 }
-.container{
-    background-color: bisque;
-    
+.card-header{
+    text-align: left;
+}
+.form-group{
+    text-align: left;
+}
+.col-lg-4 image{
+    height: 5px;
+    width: 5px;
 }
